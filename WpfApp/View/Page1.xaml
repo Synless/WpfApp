@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="WpfApp.View.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:vm1="clr-namespace:WpfApp.ViewModel"
+       mc:Ignorable="d">
+    <UserControl.DataContext>
+        <vm1:ViewModel1/>
+    </UserControl.DataContext>
+    
+    <Grid HorizontalAlignment="Center">
+        <StackPanel HorizontalAlignment="Center">
+            <TextBox Width="100" Height="30" Margin="10" Text="{Binding Text1}"/>
+            <Button Width="100" Height="30" Content="Copy" Margin="10" Command="{Binding CopyCommand}"/>
+            <TextBlock Width="100" Height="30" Margin="10" Text="{Binding Text2}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
